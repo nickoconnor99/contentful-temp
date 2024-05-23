@@ -281,33 +281,47 @@ PROJECT CSS
 =============
 */
 
-body {
-  background: var(--grey-200);
+.body {
+  background-color: gray;
 }
+
 .hero {
+  min-height: 40vh;
+  background-color: white;
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding-right: 200px;
-  padding-top: 100px;
-}
-.hero-main {
-  width: 600px;
+  padding: 50px;
 }
 
-.hero-main p {
-  margin-top: 20px ;
-  gap: 2px;
-}
-.hero-image {
-  display: none
+.hero-center {
+  width: 90vh;
+  max-width: 1120px;
 }
 
-@media (min-width: 768px) {
-  .hero-image {
-    display: inline-block;
-    width: 300px;
+.hero-title h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hero-paragraph {
+  line-height: 2;
+  max-width: 35em;
+}
+
+.img-container {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .hero-center {
+    display: grid;
+    grid-template-columns: 2f 1f;
+    gap: 4rem;
   }
-  
+  .img-container {
+    display: block;
+  }
 }
 
 
@@ -317,3 +331,40 @@ PROJECTS
 =============
 */
 
+.projects {
+  padding: 5rem 0;
+}
+
+.projects-center {
+  width: 90vw;
+  max-width: 1190px;
+  display: grid;
+  margin: 0 auto;
+  gap: 2rem;
+  margin-top: 3rem
+}
+
+.project {
+  display: block;
+}
+
+.project .img {
+  height: 15rem;
+}
+
+.project h5 {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .projects-center {
+    grid-template-columns: 1f 1f;
+  }
+}
+
+@media (min-width: 992px) {
+  .projects-center {
+    grid-template-columns: 1f 1f 1f;
+  }
+}
